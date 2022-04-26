@@ -178,5 +178,22 @@ function clearOutputACookieExists() {
 }
 
   </script>
+  <button onclick="checkACookieExists()">
+  Check a cookie exists
+</button>
+
+<button onclick="clearOutputACookieExists()">
+  Clear
+</button>
+
+<div>
+  <code id="a-cookie-existence"></code>
+</div>
+
+  <br>
+    
+  <p>Example #6</p>
+  <script>
+  </script>
 </body>
 </html>
