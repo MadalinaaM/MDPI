@@ -103,9 +103,12 @@ function clearOutputCookieValue() {
     
   <p>Example #3</p>
   <script>
-   function doOnce() {
+  function doOnce() {
   if (!document.cookie.split('; ').find(row => row.startsWith('doSomethingOnlyOnce'))) {
-   
+    // Note that we are setting `SameSite=None;` in this example because the example
+    // needs to work cross-origin.
+    // It is more common not to set the `SameSite` attribute, which results in the default,
+    // and more secure, value of `SameSite=Lax;`
     document.cookie = "doSomethingOnlyOnce=true; expires=Fri, 31 Dec 9999 23:59:59 GMT; SameSite=None; Secure";
 
     const output = document.getElementById('do-once')
@@ -119,7 +122,8 @@ function clearOutputDoOnce() {
 }
 
   </script>
-  <button onclick="doOnce()">Only do something once</button>
+  
+<button onclick="doOnce()">Only do something once</button>
 
 <button onclick="clearOutputDoOnce()">
   Clear
@@ -128,6 +132,8 @@ function clearOutputDoOnce() {
 <div>
   <code id="do-once"></code>
 </div>
+
+
 <br>
     
   <p>Example #4</p>
@@ -194,6 +200,30 @@ function clearOutputACookieExists() {
     
   <p>Example #6</p>
   <script>
+   function checkCookieHasASpecificValue() {
+  if (document.cookie.split(';').some((item) => item.includes('reader=1'))) {
+    const output = document.getElementById('a-specific-value-of-the-cookie')
+    output.textContent = '> The cookie "reader" has a value of "1"'
+  }
+}
+
+function clearASpecificValueOfTheCookie() {
+  const output = document.getElementById('a-specific-value-of-the-cookie')
+  output.textContent = ''
+}
+
   </script>
+  <button onclick="checkCookieHasASpecificValue()">
+  Check that a cookie has a specific value
+</button>
+
+<button onclick="clearASpecificValueOfTheCookie()">
+  Clear
+</button>
+
+<div>
+  <code id="a-specific-value-of-the-cookie"></code>
+</div>
+
 </body>
 </html>
