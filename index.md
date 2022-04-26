@@ -100,7 +100,7 @@ function clearOutputCookieValue() {
   <code id="cookie-value"></code>
 </div>
 <br>
-    /* ---------------------Example #3--------------------------------------------------*/
+    <!- ---------------------Example #3--------------------------------------------------->
   <p>Example #3</p>
   <script>
    function doOnce() {
