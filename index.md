@@ -44,7 +44,7 @@ Having trouble with Pages? Check out our [documentation](https://docs.github.com
 </script>
  <body> Bine ai venit la lab <button onclick="alertCookie()">Show cookies</button>
  <h3> Exercise 5 </h3>
-  // ---------------------Example #1--------------------------------------------------
+  /* ---------------------Example #1--------------------------------------------------*/
   <p>Example #1</p>
   <script>
  document.cookie = "name=oeschger; SameSite=None; Secure";
@@ -69,7 +69,7 @@ function clearOutputCookies() {
   <code id="cookies"></code>
 </div>
 <br>
-    // ---------------------Example #2--------------------------------------------------
+    /* ---------------------Example #2--------------------------------------------------*/
   <p>Example #2</p>
  <script>
   document.cookie = "test1=Hello; SameSite=None; Secure";
@@ -100,7 +100,7 @@ function clearOutputCookieValue() {
   <code id="cookie-value"></code>
 </div>
 <br>
-    // ---------------------Example #3--------------------------------------------------
+    /* ---------------------Example #3--------------------------------------------------*/
   <p>Example #3</p>
 </body>
 </html>
