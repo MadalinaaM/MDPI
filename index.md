@@ -44,6 +44,31 @@ Having trouble with Pages? Check out our [documentation](https://docs.github.com
 </script>
  <body> Bine ai venit la lab <button onclick="alertCookie()">Show cookies</button>
  <h3> Exercise 5 </h3>
- allCookies = document.cookie;
+  // ---------------------Example #1--------------------------------------------------
+  <p>Example #1</p>
+  <script>
+ document.cookie = "name=oeschger; SameSite=None; Secure";
+document.cookie = "favorite_food=tripe; SameSite=None; Secure";
+   function showCookies() {
+  const output = document.getElementById('cookies')
+  output.textContent = '> ' + document.cookie
+}
+
+function clearOutputCookies() {
+  const output = document.getElementById('cookies')
+  output.textContent = ''
+}
+  </script>
+  <button onclick="showCookies()">Show cookies</button>
+
+<button onclick="clearOutputCookies()">
+  Clear
+</button>
+
+<div>
+  <code id="cookies"></code>
+</div>
+
+    // ---------------------Example #1--------------------------------------------------
 </body>
 </html>
