@@ -42,7 +42,8 @@ Having trouble with Pages? Check out our [documentation](https://docs.github.com
  document.cookie = "favorite_task=collect Data";
  function alertCookie() { alert(document.cookie); }
 </script>
- <h3> Exercise 5 </h3>
  <body> Bine ai venit la lab <button onclick="alertCookie()">Show cookies</button>
+ <h3> Exercise 5 </h3>
+ allCookies = document.cookie;
 </body>
 </html>
