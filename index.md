@@ -122,5 +122,15 @@ function clearOutputDoOnce() {
 }
 
   </script>
+  <button onclick="doOnce()">Only do something once</button>
+
+<button onclick="clearOutputDoOnce()">
+  Clear
+</button>
+
+<div>
+  <code id="do-once"></code>
+</div>
+
 </body>
 </html>
