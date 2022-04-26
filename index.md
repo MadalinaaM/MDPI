@@ -68,7 +68,39 @@ function clearOutputCookies() {
 <div>
   <code id="cookies"></code>
 </div>
+<br>
+    // ---------------------Example #2--------------------------------------------------
+  <p>Example #2</p>
+ <script>
+  document.cookie = "test1=Hello; SameSite=None; Secure";
+document.cookie = "test2=World; SameSite=None; Secure";
 
-    // ---------------------Example #1--------------------------------------------------
+const cookieValue = document.cookie
+  .split('; ')
+  .find(row => row.startsWith('test2='))
+  .split('=')[1];
+
+function showCookieValue() {
+  const output = document.getElementById('cookie-value')
+  output.textContent = '> ' + cookieValue
+}
+
+function clearOutputCookieValue() {
+  const output = document.getElementById('cookie-value')
+  output.textContent = ''
+}
+ </script>
+  <button onclick="showCookieValue()">Show cookie value</button>
+
+<button onclick="clearOutputCookieValue()">
+  Clear
+</button>
+
+<div>
+  <code id="cookie-value"></code>
+</div>
+<br>
+    // ---------------------Example #3--------------------------------------------------
+  <p>Example #3</p>
 </body>
 </html>
