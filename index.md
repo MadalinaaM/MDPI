@@ -155,6 +155,8 @@ function clearOutputResetOnce() {
 <div>
   <code id="reset-once"></code>
 </div>
-
+<br>
+    
+  <p>Example #5</p>
 </body>
 </html>
