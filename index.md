@@ -44,7 +44,7 @@ Having trouble with Pages? Check out our [documentation](https://docs.github.com
 </script>
  <body> Bine ai venit la lab <button onclick="alertCookie()">Show cookies</button>
  <h3> Exercise 5 </h3>
-  /* ---------------------Example #1--------------------------------------------------*/
+  
   <p>Example #1</p>
   <script>
  document.cookie = "name=oeschger; SameSite=None; Secure";
@@ -69,7 +69,7 @@ function clearOutputCookies() {
   <code id="cookies"></code>
 </div>
 <br>
-    /* ---------------------Example #2--------------------------------------------------*/
+    
   <p>Example #2</p>
  <script>
   document.cookie = "test1=Hello; SameSite=None; Secure";
@@ -100,15 +100,12 @@ function clearOutputCookieValue() {
   <code id="cookie-value"></code>
 </div>
 <br>
-    <!- ---------------------Example #3--------------------------------------------------->
+    
   <p>Example #3</p>
   <script>
    function doOnce() {
   if (!document.cookie.split('; ').find(row => row.startsWith('doSomethingOnlyOnce'))) {
-    // Note that we are setting `SameSite=None;` in this example because the example
-    // needs to work cross-origin.
-    // It is more common not to set the `SameSite` attribute, which results in the default,
-    // and more secure, value of `SameSite=Lax;`
+    
     document.cookie = "doSomethingOnlyOnce=true; expires=Fri, 31 Dec 9999 23:59:59 GMT; SameSite=None; Secure";
 
     const output = document.getElementById('do-once')
@@ -130,6 +127,33 @@ function clearOutputDoOnce() {
 
 <div>
   <code id="do-once"></code>
+</div>
+<br>
+    
+  <p>Example #4</p>
+  <script>
+   function resetOnce() {
+
+  document.cookie = "doSomethingOnlyOnce=; expires=Thu, 01 Jan 1970 00:00:00 GMT; SameSite=None; Secure";
+
+  const output = document.getElementById('reset-once')
+  output.textContent = '> Reset!'
+}
+
+function clearOutputResetOnce() {
+  const output = document.getElementById('reset-once')
+  output.textContent = ''
+}
+
+  </script>
+  <button onclick="resetOnce()">Reset only once cookie</button>
+
+<button onclick="clearOutputResetOnce()">
+  Clear
+</button>
+
+<div>
+  <code id="reset-once"></code>
 </div>
 
 </body>
