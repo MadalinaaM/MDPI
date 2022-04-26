@@ -105,7 +105,7 @@ function clearOutputCookieValue() {
   <script>
    function doOnce() {
   if (!document.cookie.split('; ').find(row => row.startsWith('doSomethingOnlyOnce'))) {
-    
+   
     document.cookie = "doSomethingOnlyOnce=true; expires=Fri, 31 Dec 9999 23:59:59 GMT; SameSite=None; Secure";
 
     const output = document.getElementById('do-once')
