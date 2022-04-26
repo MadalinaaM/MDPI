@@ -224,6 +224,6 @@ function clearASpecificValueOfTheCookie() {
 <div>
   <code id="a-specific-value-of-the-cookie"></code>
 </div>
-
+<br>
 </body>
 </html>
